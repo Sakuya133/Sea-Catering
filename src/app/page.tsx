@@ -1,22 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.css"; 
+
 
 export default function Home() {
   return (
-    <div className="bg-[url('/bgfood.jpg')] bg-cover bg-center bg-no-repeat filter brightness-50 grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-[url('/bgfood.jpeg')] bg-cover bg-center bg-no-repeat filter brightness-50 grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
 
       <nav className="absolute top-0 left-0 right-0 w-full px-6 py-4 bg-black shadow-md">
         <ul className="flex justify-start gap-6">
           <li><a className="text-white hover:text-blue-400 font-medium" href="#home">Home</a></li>
-          <li><a className="text-white hover:text-blue-400 font-medium" href="#news">News</a></li>
-          <li><a className="text-white hover:text-blue-400 font-medium" href="#contact">Contact</a></li>
-          <li><a className="text-white hover:text-blue-400 font-medium" href="#about">About</a></li>
+          <li><a className="text-white hover:text-blue-400 font-medium" href="#news">Menu</a></li>
+          <li><a className="text-white hover:text-blue-400 font-medium" href="/sub">Subscription</a></li>
+          <li><a className="text-white hover:text-blue-400 font-medium" href="#about">Contact Us</a></li>
         </ul>
       </nav>
 
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start ">
         <Image
-          className="dark:invert "
+          className="dark:invert  "
           src="/next.svg"
           alt="Next.js logo"
           width={180}
