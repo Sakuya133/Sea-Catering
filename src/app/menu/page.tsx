@@ -1,6 +1,6 @@
-export default function subpage(){
+export default function menu(){
     return (
-        <main className="p-10 text-white">
+<main className="p-10 text-white">
             <nav className="absolute top-0 left-0 right-0 w-full px-6 py-4 bg-black shadow-md">
         <ul className="flex justify-start gap-6">
           <li><a className="text-white hover:text-blue-400 font-medium" href="/home">Home</a></li>
@@ -17,5 +17,7 @@ export default function subpage(){
 
 
 
+
+        
     )
 }
