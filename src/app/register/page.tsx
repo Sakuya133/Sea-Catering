@@ -20,7 +20,7 @@ export default function RegisterPage() {
   const [success, setSuccess] = useState("")
   const router = useRouter()
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -69,7 +69,8 @@ export default function RegisterPage() {
     return true
   }
 
-  const handleSubmit = async (e) => {
+  // Memperbaiki tipe event menjadi FormEvent untuk handleSubmit
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!validateForm()) return
 
@@ -88,7 +89,7 @@ export default function RegisterPage() {
     }
   }
 
-  const getPasswordStrength = (password) => {
+  const getPasswordStrength = (password: string) => {
     let strength = 0
     if (password.length >= 8) strength++
     if (/[a-z]/.test(password)) strength++

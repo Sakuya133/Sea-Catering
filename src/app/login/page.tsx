@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [error, setError] = useState("")
   const router = useRouter()
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
     if (error) setError("")
@@ -34,7 +34,8 @@ export default function LoginPage() {
     return true
   }
 
-  const handleSubmit = async (e) => {
+  // Memperbaiki tipe event menjadi FormEvent untuk handleSubmit
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!validateForm()) return
 
@@ -43,7 +44,6 @@ export default function LoginPage() {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000))
-    
       router.push("/home")
     } catch {
       setError("Login gagal. Coba lagi nanti.")
