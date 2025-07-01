@@ -66,7 +66,7 @@ export default function Home() {
       {/* Feature 1 */}
       <div className="bg-white p-8 rounded-xl shadow-md w-64 text-center">
         <Image 
-          src="/sereal.webp" // Ganti dengan path gambar di folder public
+          src="/sereal.webp" 
           alt="Feature 1" 
           width={250} 
           height={250} 
@@ -78,7 +78,7 @@ export default function Home() {
       {/* Feature 2 */}
       <div className="bg-white p-8 rounded-xl shadow-md w-64 text-center">
         <Image 
-          src="/apayaa.jpeg" // Ganti dengan path gambar di folder public
+          src="/apayaa.jpeg" 
           alt="Feature 2" 
           width={250} 
           height={250} 
@@ -90,7 +90,7 @@ export default function Home() {
       {/* Feature 3 */}
       <div className="bg-white p-8 rounded-xl shadow-md w-64 text-center">
         <Image 
-          src="/apaya.jpeg" // Ganti dengan path gambar di folder public
+          src="/apaya.jpeg" 
           alt="Feature 3" 
           width={250} 
           height={250} 
