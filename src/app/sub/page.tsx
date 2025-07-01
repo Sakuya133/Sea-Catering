@@ -36,8 +36,8 @@ export default function SubscriptionPage() {
       : 0;
 
   return (
-    <main className="min-h-screen bg-white text-black px-4 sm:px-12 py-12 max-w-3xl mx-auto">
-       <nav className="absolute top-0 left-0 right-0 w-full px-6 py-4 bg-black shadow-md z-20">
+    <>
+    <nav className="absolute top-0 left-0 right-0 w-full px-6 py-4 bg-black shadow-md z-20">
         <ul className="flex justify-start gap-6">
           <li>
             <a className="text-white hover:text-blue-400 font-medium" href="/home">Home</a>
@@ -53,6 +53,8 @@ export default function SubscriptionPage() {
           </li>
         </ul>
       </nav>
+    <main className="min-h-screen bg-white text-black px-4 sm:px-12 py-12 max-w-3xl mx-auto">
+       
 
       <h1 className="text-3xl sm:text-4xl font-extrabold mb-8 text-[#4c6723]">
         Subscription Form
@@ -167,5 +169,6 @@ export default function SubscriptionPage() {
         </button>
       </form>
     </main>
+    </>
   );
 }

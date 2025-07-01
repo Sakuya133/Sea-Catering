@@ -13,6 +13,7 @@ export default function Home() {
           <li><a className="text-white hover:text-blue-400 font-medium" href="/menu">Menu</a></li>
           <li><a className="text-white hover:text-blue-400 font-medium" href="/sub">Subscription</a></li>
           <li><a className="text-white hover:text-blue-400 font-medium" href="#about">Contact Us</a></li>
+          <li><a className="text-white hover:text-blue-400 font-medium" href="/register">Log In</a></li>
         </ul>
       </nav>
 
