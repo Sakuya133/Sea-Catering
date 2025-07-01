@@ -1,25 +1,29 @@
-"use client";
 
+"use client";
 import { useState } from "react";
+import Image from "next/image";
 
 const mealPlans = [
   {
     title: "Diet Plan",
     price: "RpXXX.XXX",
     description:
-      "Deskripsi lengkap tentang Diet Plan. Kamu bisa menambahkan info nutrisi, manfaat, dan lain-lain di sini.",
+      "Diet Plan dirancang khusus untuk membantu Anda mencapai tujuan kesehatan dan kebugaran dengan cara yang seimbang dan terstruktur. Setiap rencana makan dalam Diet Plan ini dirancang untuk memenuhi kebutuhan nutrisi harian Anda, dengan kombinasi yang tepat antara protein, karbohidrat, lemak sehat, vitamin, dan mineral. Kami memastikan setiap menu mengandung bahan-bahan berkualitas tinggi yang mendukung metabolisme tubuh, meningkatkan energi, dan membantu proses penurunan berat badan secara alami.Diet Plan ini tidak hanya fokus pada pengendalian kalori, tetapi juga memperhatikan kualitas makanan yang dikonsumsi, untuk mendukung keseimbangan hormonal dan fungsi tubuh secara keseluruhan. Anda akan mendapatkan informasi lengkap tentang jumlah kalori, ukuran porsi, serta manfaat kesehatan dari setiap bahan makanan yang digunakan, sehingga Anda bisa lebih bijak dalam memilih apa yang Anda makan.Manfaat utama dari mengikuti Diet Plan kami adalah meningkatkan energi tubuh, memperbaiki pola makan, dan mencapai berat badan ideal dengan cara yang tidak ekstrem. Rencana ini juga dapat membantu Anda mengatur kadar gula darah, meningkatkan metabolisme, dan mendukung kesehatan pencernaan. Tidak hanya itu, Diet Plan kami juga memberikan fleksibilitas untuk menyesuaikan dengan berbagai preferensi diet, seperti opsi vegetarian, vegan, atau bebas gluten.Dengan Diet Plan, Anda tidak hanya mendapatkan menu yang lezat dan bergizi, tetapi juga mendukung gaya hidup sehat jangka panjang yang bisa Anda nikmati dengan mudah setiap hari",
+    image: "/sereal.webp", // Add your image path here
   },
   {
     title: "Meal Plan 1",
     price: "RpXXX.XXX",
     description:
-      "Deskripsi lengkap tentang Meal Plan 1. Bisa memuat menu harian, kalori, atau bahan makanan yang digunakan.",
+      "Meal Plan 1 dirancang untuk memenuhi kebutuhan nutrisi harian Anda dengan pilihan menu yang sehat dan seimbang. Setiap paket mencakup menu harian yang bervariasi, lengkap dengan informasi tentang kandungan kalori untuk memastikan Anda tetap menjaga asupan energi yang optimal. Kami menggunakan bahan makanan berkualitas tinggi yang tidak hanya lezat tetapi juga mendukung gaya hidup sehat Anda. Meal Plan ini juga memberikan opsi untuk menyesuaikan bahan makanan berdasarkan preferensi diet, seperti rendah karbohidrat, tinggi protein, atau bebas gluten. Dengan Meal Plan 1, Anda dapat menikmati makanan yang bergizi tanpa khawatir tentang perencanaan atau penghitungan kalori, sehingga Anda dapat fokus pada aktivitas harian Anda sambil tetap menjaga kesehatan tubuh.",
+    image: "/apayaa.jpeg", // Add your image path here
   },
   {
     title: "Meal Plan 2",
     price: "RpXXX.XXX",
     description:
-      "Deskripsi lengkap tentang Meal Plan 2. Tambahkan info menarik seperti opsi vegan, halal, atau testimoni.",
+      "Meal Plan 2 menawarkan pilihan menu yang tidak hanya sehat tetapi juga disesuaikan dengan berbagai kebutuhan diet. Setiap paket dirancang dengan mempertimbangkan keberagaman preferensi, seperti opsi vegan, halal, atau bebas gluten, memastikan bahwa Anda dapat menikmati makanan yang sesuai dengan gaya hidup dan keyakinan Anda. Kami menggunakan bahan-bahan segar dan alami yang tidak hanya menyehatkan tetapi juga lezat, memberikan pengalaman makan yang memuaskan setiap hari. Meal Plan 2 juga dilengkapi dengan informasi detail tentang kalori dan kandungan gizi, sehingga Anda dapat dengan mudah mengatur asupan nutrisi harian Anda. Berbagai testimoni dari pelanggan yang telah mencoba Meal Plan ini menunjukkan betapa mereka merasa lebih sehat, bertenaga, dan puas dengan pilihan menu yang kami tawarkan. Dengan Meal Plan 2, Anda mendapatkan makanan yang tidak hanya baik untuk tubuh, tetapi juga selaras dengan nilai-nilai pribadi Anda.",
+     image: "/apaya.jpeg", // Add your image path here
   },
 ];
 
@@ -51,7 +55,7 @@ export default function MenuPage() {
             <a className="text-white hover:text-blue-400 font-medium" href="/sub">Subscription</a>
           </li>
           <li>
-            <a className="text-white hover:text-blue-400 font-medium" href="#about">Contact Us</a>
+            <a className="text-white hover:text-blue-400 font-medium" href="/contact">Contact Us</a>
           </li>
         </ul>
       </nav>
@@ -67,7 +71,16 @@ export default function MenuPage() {
             className="bg-[#7b944a] text-white rounded-3xl p-6 sm:p-10 flex flex-col sm:flex-row gap-6 items-center shadow-md"
           >
             <div className="w-full sm:w-1/3">
-              <div className="w-full aspect-square bg-gray-400 rounded-xl" />
+              <div className="w-full h-64 sm:h-80 bg-gray-400 rounded-xl overflow-hidden">
+                <Image
+                  src={plan.image}
+                  alt={plan.title}
+                  layout="responsive"
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full"
+                />
+              </div>
             </div>
             <div className="w-full sm:w-2/3">
               <h2 className="text-2xl font-bold mb-1">{plan.title}</h2>

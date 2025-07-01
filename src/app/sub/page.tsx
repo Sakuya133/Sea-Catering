@@ -49,7 +49,7 @@ export default function SubscriptionPage() {
             <a className="text-white hover:text-blue-400 font-medium" href="/sub">Subscription</a>
           </li>
           <li>
-            <a className="text-white hover:text-blue-400 font-medium" href="#about">Contact Us</a>
+            <a className="text-white hover:text-blue-400 font-medium" href="/contact">Contact Us</a>
           </li>
         </ul>
       </nav>

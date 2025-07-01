@@ -43,8 +43,8 @@ export default function LoginPage() {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 2000))
-      // Simulasikan sukses login
-      router.push("/dashboard")
+    
+      router.push("/home")
     } catch {
       setError("Login gagal. Coba lagi nanti.")
     } finally {
